@@ -31,7 +31,7 @@
       // The provided key works for this sample only when run from
       // https://google-api-javascript-client.googlecode.com/hg/samples/authSample.html
       // To use in your own application, replace this API key with your own.
-      var apiKey = '';
+      var apiKey = 'AIzaSyAOdqXBCyOZdkXkljknwq1Z-bdwQosMvHE';
 
       // Use a button to handle authentication the first time.
       function handleClientLoad() {
@@ -41,10 +41,10 @@
 
       // Load the API and make an API call.  Display the results on the screen.
       function makeApiCall() {
-        gapi.client.load('plus', 'v1', function() {
-          var request = gapi.client.plus.people.get({
-            'userId': ''
-            // For instance: 
+        gapi.client.load('plus', 'v1', function() { // servicio, version , funcion callBack
+          var request = gapi.client.plus.people.get({ // mira en el explorador con los parametros que nos interesen
+            'userId': '109371503170659888669' // yo : 109371503170659888669 -- Mirando mi perfil de Google+
+            // For instance:
             // 'userId': '+GregorioRobles'
           });
           request.execute(function(resp) {
